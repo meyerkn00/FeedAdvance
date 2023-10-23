@@ -1,5 +1,5 @@
 html {
-  font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
+  font-size: 16px; /* px means "pixels": the base font size is now 16 pixels high */
   font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
 }
 h1 {
@@ -29,6 +29,32 @@ body {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539f;
+  color: #ffffff;
   text-shadow: 3px 3px 1px black;
+}
+
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
 }

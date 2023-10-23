@@ -14,9 +14,36 @@
   </head>
 
   <body>
-    <p>Please input the following, select proper units, and then hit "Calculate"</p>
+    <p>Please input the following, select proper units, and then hit "Calculate".</p>
 
-    <button>Calculate</button>
+      <form action="" method="get" class="form-example">
+        <div class="form-example">
+          <label for="weight">Enter the baby's weight (grams): </label>
+          <input 
+            type="number" 
+            name="weight" 
+            id="weight" 
+            required 
+            min=0 
+            placeholder="Input baby weight here" />
+        </div>
+        <div class="form-example">
+          <label for="volgoal">Enter the baby's volume goal (mL/kg/day): </label>
+          <input 
+            type="number" 
+            name="volgoal" 
+            id="volgoal" 
+            required 
+            min=0 
+            placeholder="Input baby volume goal here" />
+        </div>
+        <!-- here you can put more forms. 'Calculate' submits the form.-->
+        <div class="form-example">
+          <input 
+            type="submit" 
+            value="Calculate" />
+        </div>
+      </form>
 
     <script src="scripts/main.js"></script>
 

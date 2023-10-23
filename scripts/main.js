@@ -17,3 +17,7 @@ function setUserName() {
   localStorage.setItem("name", myName);
   myHeading.textContent = `Mozilla is cool, ${myName}`;
 }
+
+document.querySelector("myButton").addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
+});
