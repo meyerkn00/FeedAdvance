@@ -1,23 +1,19 @@
-const myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello world!";
+function formsubmit(event) {
+  var weight = document.getElementById("weight");
+  var volgal = document.getElementById("volgoal");
+  /* add additional form elements */
 
-#/let myVariable = "Bob"; #/
+  localStorage.setItem("weight", weight.value)
+  localStorage.setItem("volgoal", volgoal.value)
+  /* add additional variables to save locally */
+  
+  /* math goes here*/
 
-#/
-document.querySelector("html").addEventListener("click", function () {
-  alert("Ouch! Stop poking me!");
-});
-#/
-
-let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
-
-function setUserName() {
-  const myName = prompt("Please enter your name.");
-  localStorage.setItem("name", myName);
-  myHeading.textContent = `Mozilla is cool, ${myName}`;
+  /* below is where I output the results in a <p> element */
+  output.textContent = 'Output goes here: ${event.timeStamp}';
 }
 
-document.querySelector("myButton").addEventListener("click", function () {
-  alert("Ouch! Stop poking me!");
-});
+const form = document.getElementById("form");
+const output = document.getElementById("output");
+/* Form submission is an event, so I can use that to call my function */
+form.addEventListener("submit", formsubmit);
