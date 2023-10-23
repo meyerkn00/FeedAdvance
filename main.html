@@ -15,29 +15,29 @@
 
   <body>
     <h1>Feed Advance Calculator</h1>
-    
+
     <p>Please input the following, select proper units, and then hit "Calculate".</p>
 
       <form action="" method="get" class="form">
         <div class="form">
           <label for="weight">Enter the baby's weight (grams): </label>
           <input 
-            type="number" 
-            name="weight" 
-            id="weight" 
-            required 
-            min=0 
+            type="number"
+            name="weight"
+            id="weight"
+            required
+            min=1
             placeholder="Input weight" />
         </div>
 
         <div class="form">
           <label for="volgoal">Enter the baby's volume goal (mL/kg/day): </label>
           <input 
-            type="number" 
-            name="volgoal" 
-            id="volgoal" 
-            required 
-            min=0 
+            type="number"
+            name="volgoal"
+            id="volgoal"
+            required
+            min=1
             placeholder="Input volume goal" />
         </div>
 
@@ -45,7 +45,7 @@
         
         <div class="form">
           <input 
-            type="submit" 
+            type="submit"
             value="Calculate" />
         </div>
       </form>
