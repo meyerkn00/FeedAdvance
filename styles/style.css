@@ -32,7 +32,7 @@ body {
   border: 5px solid black;
 }
 
-/* The following is related to the form*/
+/* The following is related to the form */
 
 form.form {
   display: table;
@@ -55,6 +55,7 @@ label {
 /* 
 The following sets the input borders. 
 The issue I am having is that I don't want the borders to show "invalid" when first loaded.
+Right now, input:invalid is never shown
 */
 input:invalid {
   border: 2px dashed red;

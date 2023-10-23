@@ -10,7 +10,7 @@ function formsubmit(event) {
   /* math goes here*/
 
   /* below is where I output the results in a <p> element */
-  output.textContent = 'Output goes here: ${event.timeStamp}';
+  output.textContent = 'Output goes here:';
 }
 
 const form = document.getElementById("form");
