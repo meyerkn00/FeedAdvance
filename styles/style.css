@@ -42,6 +42,11 @@ div.form {
   display: table-row;
 }
 
+div.formbutton {
+  display: flex;
+  justify-content: center;
+}
+
 label,
 input {
   display: table-cell;
