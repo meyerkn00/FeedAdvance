@@ -1,10 +1,12 @@
 html {
   font-size: 16px; /* px means "pixels": the base font size is now 16 pixels high */
-  font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
+  font-family: "Open Sans", sans-serif;
 }
+
 h1 {
-  font-size: 60px;
+  font-size: 20px;
   text-align: center;
+  color: black;
 }
 
 p,
@@ -14,9 +16,13 @@ li {
   letter-spacing: 1px;
 }
 
+/* set background color, currently light blue */
+
 html {
   background-color: #b8e2f4;
 }
+
+/* Set color of box that contains content */
 
 body {
   width: 600px;
@@ -26,12 +32,7 @@ body {
   border: 5px solid black;
 }
 
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #ffffff;
-  text-shadow: 3px 3px 1px black;
-}
+/* The following is related to the form*/
 
 form.form-example {
   display: table;
@@ -51,10 +52,18 @@ label {
   padding-right: 10px;
 }
 
+/* 
+The following sets the input borders. 
+The issue I am having is that I don't want the borders to show "invalid" when first loaded.
+*/
 input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
+  border: 2px solid black;
+}
+
+input:placeholder-shown {
   border: 2px solid black;
 }
