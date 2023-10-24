@@ -1,6 +1,6 @@
 html {
   font-size: 16px; /* px means "pixels": the base font size is now 16 pixels high */
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
 }
 
 h1 {
@@ -13,13 +13,19 @@ p,
 li {
   font-size: 16px;
   line-height: 2;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 
 /* set background color, currently light blue */
 
 html {
   background-color: #b8e2f4;
+}
+
+p#output {
+  display: flex;
+  justify-content: center;
+
 }
 
 /* Set color of box that contains content */

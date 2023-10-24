@@ -1,4 +1,7 @@
 function formsubmit(event) {
+    /* This one line stops the form from actually submitting, and instead lets JS hijack it */
+    event.preventDefault();
+
     var weight = document.getElementById("weight");
     var volgal = document.getElementById("volgoal");
     /* add additional form elements */
