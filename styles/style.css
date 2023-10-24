@@ -40,8 +40,10 @@ body {
 
 /* The following is related to the form */
 
-form.form {
+form#formid.form {
   display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.form {
@@ -49,8 +51,15 @@ div.form {
 }
 
 div.formbutton {
+  /*
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  */
+  /*
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  */
 }
 
 label,
