@@ -26,7 +26,7 @@ function formsubmit(event) {
     Below is where I output the results in the <p> element directly below the form. 
     Note that concat string needs to go within backticks
     */
-    output.textContent = `Output goes here: ${result}`;
+    output.textContent = `Output goes here: ${result} (units)`;
 }
 
 window.onload = function() {
