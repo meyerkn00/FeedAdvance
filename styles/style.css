@@ -39,10 +39,13 @@ body {
 }
 
 /* The following is related to the form */
+
+/* set parent div (contains both forms) to flex, which fills the available space */
 div.flex-parent {
   display: flex;
 }
 
+/* Split space w/in div to 75% dataform and 25% notes form */
 form#dataform.form {
   width: 75%;
   float: left;
@@ -59,6 +62,7 @@ form#notesform.form {
   */
 }
 
+/* misc formatting, not sure what this does anymore */
 div.form {
   display: table-row;
 }
@@ -75,6 +79,7 @@ div.formbutton {
   */
 }
 
+/* formatting input fields and labels */
 label,
 input {
   display: table-cell;
@@ -83,6 +88,12 @@ input {
 
 label {
   padding-right: 10px;
+}
+
+/* hide 'notehide' class since we only need notes for things (etc thing1, thing2) per spec*/
+
+input#notehide {
+  visibility: collapse;
 }
 
 /* 
