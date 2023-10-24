@@ -44,7 +44,7 @@ div.form {
 
 div.formbutton {
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 label,

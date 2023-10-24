@@ -11,7 +11,7 @@ function formsubmit(event) {
 
     /* below is where I output the results in a <p> element */
     output.textContent = 'Output goes here';
-  }
+}
 
 window.onload = function() {
 
