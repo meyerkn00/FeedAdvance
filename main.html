@@ -18,9 +18,10 @@
 
     <p>Please input the following, select proper units, and then hit "Calculate".</p>
 
-      <form id="formid" action="" method="post" class="form">
+    <div class='flex-parent'>
+      <form id="dataform" action="" method="post" class="form">
         <div class="form">
-          <label for="weight">Enter the baby's weight (grams): </label>
+          <label for="weight">Enter the baby's weight (grams):</label>
           <input 
             type="number"
             name="weight"
@@ -31,7 +32,7 @@
         </div>
 
         <div class="form">
-          <label for="volgoal">Enter the baby's volume goal (mL/kg/day): </label>
+          <label for="volgoal">Enter the baby's volume goal (mL/kg/day):</label>
           <input 
             type="number"
             name="volgoal"
@@ -41,7 +42,27 @@
             placeholder="Input volume goal" />
         </div>
 
-        <!-- here you can put more forms. 'Calculate' below submits the form.-->
+        <div class="form">
+          <label for="thing1">Enter additional thing 1 (Unit TBD):</label>
+          <input 
+          type="number" 
+          name="thing1"
+          id="thing1"
+          min=0
+          placeholder="Input Thing 1" />
+        </div>
+
+        <div class="form">
+          <label for="thing2">Enter additional thing 2 (Unit TBD):</label>
+          <input 
+          type="number" 
+          name="thing2"
+          id="thing2"
+          min=0
+          placeholder="Input Thing 2" />
+        </div>
+
+        <!-- here you can put more inputs. 'Calculate' below submits the form.-->
         
         <div class="formbutton">
           <input 
@@ -49,6 +70,19 @@
             value="Calculate" />
         </div>
       </form>
+
+      <form id='notesform' class='form'>
+        <div class="form">
+          <input type="text" name="note1"/>
+          <input type="text" name="note2"/>
+          <input type="text" name="note3"/>
+          <input type="text" name="note4"/>
+      </div>
+    </form>
+
+
+
+    </div>
 
     <p id="output"></p>
 

@@ -40,7 +40,7 @@ body {
 
 /* The following is related to the form */
 
-form#formid.form {
+form#dataform.form {
   display: table;
   margin-left: auto;
   margin-right: auto;

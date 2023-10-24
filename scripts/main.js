@@ -24,7 +24,7 @@ function formsubmit(event) {
 
 window.onload = function() {
 
-  var form = document.getElementById("formid");
+  var form = document.getElementById("dataform");
   var output = document.getElementById("output");
   /* Form submission is an event, so I can use that to call my function */
   form.addEventListener("submit", formsubmit);
