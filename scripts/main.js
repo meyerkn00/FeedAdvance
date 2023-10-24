@@ -13,10 +13,10 @@ function formsubmit(event) {
     output.textContent = 'Output goes here';
   }
 
-window.onload = (event) => {
+window.onload = function() {
 
-  const form = document.getElementById("form");
-  const output = document.getElementById("output");
+  var form = document.getElementById("formid");
+  var output = document.getElementById("output");
   /* Form submission is an event, so I can use that to call my function */
   form.addEventListener("submit", formsubmit);
 
