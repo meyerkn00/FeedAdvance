@@ -39,11 +39,24 @@ body {
 }
 
 /* The following is related to the form */
+div.flex-parent {
+  display: flex;
+}
 
 form#dataform.form {
+  width: 75%;
+  float: left;
+}
+
+form#notesform.form {
+  width: 25%;
+  float: right;
+  /*
   display: table;
+  flex: 1;
   margin-left: auto;
   margin-right: auto;
+  */
 }
 
 div.form {
