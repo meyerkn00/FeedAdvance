@@ -92,7 +92,7 @@ label {
 
 /* hide 'notehide' class since we only need notes for things (etc thing1, thing2) per spec*/
 
-input#notehide {
+input.hidenote {
   visibility: collapse;
 }
 
