@@ -6,8 +6,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link href="styles/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" 
-    rel="stylesheet" />
+    
+    <!-- Font goes here if necessary, also need to turn on in CSS
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" 
+      rel="stylesheet" />
+    -->
     
     <title>Feed Advance Calculations</title>
   
@@ -18,8 +21,78 @@
 
     <p>Please input the following, select proper units, and then hit "Calculate".</p>
 
-    <div class='flex-parent'>
-      <form id="dataform" action="" method="post" class="form">
+    <form id="dataform" action="" method="post" class="form">
+
+      <div class="mainrow">
+        <div class="formlabels">
+
+          <label for="weight">Weight (grams):</label> <br />
+          <label for="volgoal">Volume goal (mL/kg/day):</label> <br />
+          <label for="thing1">Thing 1 (Unit TBD):</label> <br />
+          <label for="thing2">Thing 2 (Unit TBD):</label> <br />
+
+        </div>
+
+        <div class="forminputs">
+
+          <input 
+            type="number"
+            name="weight"
+            id="weight"
+            required
+            min=1
+            placeholder="Input weight"
+            class="datainput" />
+          <input 
+            type="number"
+            name="volgoal"
+            id="volgoal"
+            required
+            min=1
+            placeholder="Input volume goal"
+            class="datainput" />
+          <input 
+            type="number" 
+            name="thing1"
+            id="thing1"
+            min=0
+            placeholder="Input Thing 1"
+            class="datainput" />
+          <input 
+            type="number" 
+            name="thing2"
+            id="thing2"
+            min=0
+            placeholder="Input Thing 2"
+            class="datainput" />
+
+        </div>
+        
+        <div class="formnotes">
+
+          <input type="text" id="note1" class="hidenote"/>
+          <input type="text" id="note2" class="hidenote"/>
+          <input type="text" id="note3" placeholder="Enter note"/>
+          <input type="text" id="note4" placeholder="Enter note"/>
+
+        </div>
+
+      </div>
+
+      <div class="formbutton">
+
+        <input 
+          type="submit"
+          value="Calculate" />
+
+      </div>
+
+    </form>
+
+
+
+        <!-- Below is the old form code-->
+    <!--
         <div class="form">
           <label for="weight">Weight (grams):</label>
           <input 
@@ -65,8 +138,10 @@
             placeholder="Input Thing 2"
             class="datainput" />
         </div>
+    -->
 
         <!-- here you can put more inputs. 'Calculate' below submits the form.-->
+    <!--
           <div class="formbutton">
             <input 
               type="submit"
@@ -83,9 +158,8 @@
       </div>
     </form>
 
-
-
     </div>
+    -->
 
     <p id="output"></p>
 
