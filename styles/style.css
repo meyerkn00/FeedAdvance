@@ -6,10 +6,23 @@ html {
 }
 
 /* Formatting text */
-h1 {
-  font-size: 28px;
+h1,
+h2,
+h3 {
   text-align: center;
   color: black;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 p {
@@ -43,6 +56,11 @@ label {
 }
 
 div.mainrow {
+  display: table-row ;
+}
+
+/*
+div.mainrow {
   display: flex;
 }
 
@@ -74,3 +92,4 @@ div.formbutton {
   justify-content: center;
   padding-top: 10px;
 }
+*/
