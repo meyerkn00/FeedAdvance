@@ -44,16 +44,17 @@ form.formnotes {
   display: grid;
 }
 
-form.formlabels {
-  
+div.formlabels {
+  width: 40%;
+  float: left;
 }
 
-form.forminputs {
-
+div.forminputs {
+  width: 30%;
 }
 
-form.formnotes {
-
+div.formnotes {
+  width: 30%;
 }
 
 input.hidenote {
