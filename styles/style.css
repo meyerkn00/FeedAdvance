@@ -34,6 +34,14 @@ body {
   border: 5px solid black;
 }
 
+input {
+  border: 2px solid black;
+}
+
+label {
+  padding-right: 10px;
+}
+
 div.mainrow {
   display: flex;
 }
@@ -61,10 +69,8 @@ input.hidenote {
   visibility: collapse;
 }
 
-input {
-  border: 2px solid black;
-}
-
-label {
-  padding-right: 10px;
+div.formbutton {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
