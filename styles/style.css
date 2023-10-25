@@ -55,10 +55,33 @@ label {
   padding-right: 10px;
 }
 
+
 div.mainrow {
-  display: table-row ;
+  display: table;
+  margin: 0 auto;
 }
 
+div.infusioncol,
+div.ratecol {
+  display: grid;
+  width: 50%;
+
+}
+
+div.infusioncol {
+  float: left;
+}
+
+div.sidecol {
+  display: table;
+  margin: 0 auto;
+}
+
+div.formbutton {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
 /*
 div.mainrow {
   display: flex;

@@ -25,7 +25,7 @@
 
       <div class="mainrow">
 
-        <label for="tflrate">TFL Rate (mL/hr):</label> 
+        <label for="tflrate">TFL Rate:</label> 
         <input 
           type="number"
           name="tflrate_val"
@@ -34,8 +34,9 @@
           min=1
           placeholder="Input TFL Rate"
           class="datainput" />
+        <p>mL/hr</p>
         <br />
-        <label for="feedlimit">Ordered Feed Limit (mL/kg/d):</label> 
+        <label for="feedlimit">Ordered Feed Limit:</label> 
         <input 
           type="number"
           name="feedlimit_val"
@@ -44,8 +45,9 @@
           min=1
           placeholder="Input Feed Limit"
           class="datainput" />
+        <p>mL/kg/day</p>
         <br />
-        <label for="weight">Infant Weight (kg):</label> 
+        <label for="weight">Infant Weight:</label> 
         <input 
           type="number"
           name="weight_val"
@@ -54,6 +56,7 @@
           min=1
           placeholder="Input weight"
           class="datainput" />
+        <p>kg</p>
 
         </div>
 
@@ -65,142 +68,100 @@
           <h3>Infusion</h3>
           <br />
 
-          <label for="inf1">1.</label>
-          <input
-            type="text"
-            name="note1"
-            id="inf1"
-            class="note" />
+          <div class="sidecol">
 
-          <label for="inf2">2.</label>
-          <input
-            type="text"
-            name="note2"
-            id="inf2"
-            class="note" />
+            <label for="inf1">1.</label>
+            <input
+              type="text"
+              name="note1"
+              id="inf1"
+              class="note" />
+            <br />
 
-          <label for="inf3">3.</label>
-          <input
-            type="text"
-            name="note3"
-            id="inf3"
-            class="note" />
+            <label for="inf2">2.</label>
+            <input
+              type="text"
+              name="note2"
+              id="inf2"
+              class="note" />
+            <br />
 
-          <label for="inf4">4.</label>
-          <input
-            type="text"
-            name="note4"
-            id="inf4"
-            class="note" />
+            <label for="inf3">3.</label>
+            <input
+              type="text"
+              name="note3"
+              id="inf3"
+              class="note" />
+            <br />
 
-          <label for="inf5">5.</label>
-          <input
-            type="text"
-            name="note5"
-            id="inf5"
-            class="note" />
+            <label for="inf4">4.</label>
+            <input
+              type="text"
+              name="note4"
+              id="inf4"
+              class="note" />
+            <br />
+
+            <label for="inf5">5.</label>
+            <input
+              type="text"
+              name="note5"
+              id="inf5"
+              class="note" />
+            <br />
+
+            </div>
         </div>
 
         <div class="ratecol">
           <h3>Rate (mL/hr)</h3>
           <br />
 
-          <label for="rate1">1.</label>
-          <input
-            type="number"
-            name="rate1"
-            id="r1"
-            class="rate" />
+          <div class="sidecol">
 
-          <label for="rate2">2.</label>
-          <input
-            type="number"
-            name="rate2"
-            id="r2"
-            class="rate" />
+            <label for="rate1">1.</label>
+            <input
+              type="number"
+              name="rate1"
+              id="r1"
+              class="rate" />
+            <br />
 
-          <label for="rate3">3.</label>
-          <input
-            type="number"
-            name="rate3"
-            id="r3"
-            class="rate" />
+            <label for="rate2">2.</label>
+            <input
+              type="number"
+              name="rate2"
+              id="r2"
+              class="rate" />
+            <br />
 
-          <label for="rate4">4.</label>
-          <input
-            type="number"
-            name="rate4"
-            id="r4"
-            class="rate" />
+            <label for="rate3">3.</label>
+            <input
+              type="number"
+              name="rate3"
+              id="r3"
+              class="rate" />
+            <br />
 
-          <label for="rate5">5.</label>
-          <input
-            type="number"
-            name="rate5"
-            id="r5"
-            class="rate" />
+            <label for="rate4">4.</label>
+            <input
+              type="number"
+              name="rate4"
+              id="r4"
+              class="rate" />
+            <br />
+
+            <label for="rate5">5.</label>
+            <input
+              type="number"
+              name="rate5"
+              id="r5"
+              class="rate" />
+            <br />
+
+          </div>
 
       </div>
-
-
-<!--
-      <div class="mainrow">
-        <div class="formlabels">
-
-          <label for="weight">Weight (grams):</label> 
-          <br />
-          <label for="volgoal">Volume goal (mL/kg/day):</label> 
-          <br />
-          <label for="thing1">Thing 1 (Unit TBD):</label> 
-          <br />
-          <label for="thing2">Thing 2 (Unit TBD):</label> 
-          <br />
-
-        </div>
-
-        <div class="forminputs">
-
-          <input 
-            type="number"
-            name="weightval"
-            id="weight"
-            required
-            min=1
-            placeholder="Input weight"
-            class="datainput" />
-          <input 
-            type="number"
-            name="volgoalval"
-            id="volgoal"
-            required
-            min=1
-            placeholder="Input volume goal"
-            class="datainput" />
-          <input 
-            type="number" 
-            name="thing1val"
-            id="thing1"
-            min=0
-            placeholder="Input Thing 1"
-            class="datainput" />
-          <input 
-            type="number" 
-            name="thing2val"
-            id="thing2"
-            min=0
-            placeholder="Input Thing 2"
-            class="datainput" />
-
-        </div>
-        
-        <div class="formnotes">
-
-          <input type="text" id="note1" class="hidenote"/>
-          <input type="text" id="note2" class="hidenote"/>
-          <input type="text" id="note3" placeholder="Enter note"/>
-          <input type="text" id="note4" placeholder="Enter note"/>
-
-        </div>
 
       </div>
 
@@ -212,7 +173,7 @@
           value="Calculate" />
 
       </div>
-<--
+
     </form>
 
     <p id="output"></p>
