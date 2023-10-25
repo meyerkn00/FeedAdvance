@@ -1,25 +1,21 @@
 html {
   font-size: 20px; /* px means "pixels": the base font size is now 16 pixels high */
   /* font-family: "Open Sans", sans-serif; */
+  /* set background color, currently light blue */
+  background-color: #b8e2f4;
 }
 
+/* Formatting text */
 h1 {
   font-size: 28px;
   text-align: center;
   color: black;
 }
 
-p,
-li {
+p {
   /* font-size: 16px; */
   line-height: 2;
   letter-spacing: 0px;
-}
-
-/* set background color, currently light blue */
-
-html {
-  background-color: #b8e2f4;
 }
 
 p#output {
@@ -28,7 +24,7 @@ p#output {
 
 }
 
-/* Set color of box that contains content */
+/* Set attributes that contains the content */
 
 body {
   width: 600px;
@@ -40,7 +36,7 @@ body {
 
 /* The following is related to the form */
 
-/* set parent div (contains both forms) to flex, which fills the available space */
+/* set parent div (contains both forms) to flex, which fills the available space in body */
 div.flex-parent {
   display: flex;
 }
@@ -86,6 +82,10 @@ input {
   margin-bottom: 10px;
 }
 
+input {
+  border: 2px solid black;
+}
+
 label {
   padding-right: 10px;
 }
@@ -97,21 +97,4 @@ input.datainput {
 
 input.hidenote {
   visibility: collapse;
-}
-
-/* 
-The following sets the input borders. 
-The issue I am having is that I don't want the borders to show "invalid" when first loaded.
-Right now, input:invalid is never shown
-*/
-input:invalid {
-  border: 2px dashed red;
-}
-
-input:valid {
-  border: 2px solid black;
-}
-
-input:placeholder-shown {
-  border: 2px solid black;
 }
