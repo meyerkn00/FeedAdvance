@@ -11,7 +11,8 @@ function formsubmit(event) {
 
     let hourly_feed_volume = (feed_volume/3);
 
-    /* Rates are coerced to 0 if they are any "falsey" values such as NaN, null, etc */
+    /* Rates are coerced to 0 if they are any "falsey" values such as NaN, null, etc
+    Note: this is no longer needed because the default value for these inputs is 0 */
     let fluid_rate = +formData.get('tflrate_val') 
       - (formData.get('rate1') || 0)
       - (formData.get('rate2') || 0)

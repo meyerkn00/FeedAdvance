@@ -1,8 +1,7 @@
 html {
-  font-size: 20px; /* px means "pixels": the base font size is now 16 pixels high */
+  font-size: 20px;
   /* font-family: "Open Sans", sans-serif; */
-  /* set background color, currently light blue */
-  background-color: #b8e2f4;
+  background-color: #b8e2f4; /* set background color, currently light blue */
 }
 
 /* Formatting text */
@@ -31,12 +30,8 @@ p {
   /* font-size: 16px; */
   line-height: 2;
   letter-spacing: 0px;
-}
-
-p#output {
   display: flex;
   justify-content: center;
-
 }
 
 /* Set attributes that contains the content */
@@ -57,15 +52,18 @@ label {
   padding-right: 10px;
 }
 
+/* Only applies to the unit labels */
 label.unitlab {
   padding-left: 5px;
 }
 
+/* Centers TFL Rate, Weight, etc column */
 div.mainrow {
   display: table;
   margin: 0 auto;
 }
 
+/* Splits Cont. Infusions section into two columns */
 div.infusioncol,
 div.ratecol {
   display: grid;
@@ -82,42 +80,10 @@ div.sidecol {
   margin: 0 auto;
 }
 
-div.formbutton {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-}
-/*
-div.mainrow {
-  display: flex;
-}
-
-form.formlabels,
-form.forminputs,
-form.formnotes {
-  display: grid;
-}
-
-div.formlabels {
-  width: 40%;
-  float: left;
-}
-
-div.forminputs {
-  width: 30%;
-}
-
-div.formnotes {
-  width: 30%;
-}
-
-input.hidenote {
-  visibility: collapse;
-}
+/* Centers 'Calculate' button */
 
 div.formbutton {
   display: flex;
   justify-content: center;
   padding-top: 10px;
 }
-*/
