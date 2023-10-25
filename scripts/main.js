@@ -2,49 +2,36 @@ function formsubmit(event) {
     /* This one line stops the form from actually submitting, and instead lets JS hijack it */
     event.preventDefault();
 
-    /* Currently broken: Pulls key-value pairs from submitted form 
-    let form = document.querySelector("form");
-
-    /* Takes said key-value pairs and assigns to variables we can use 
-    let weight = form.elements.weightval;
-    let volgoal = form.elements.volgoalval;
-    let thing1 = form.elements.thing1val;
-    let thing2 = form.elements.thing2val;
-    */    
-
-
+    /* Pulls key-value pair from the form result and stores it as formData */
     const formElement = document.querySelector('form');
     const formData = new FormData(formElement);
-    console.log(formData.get('weightval'));
 
-    /* old code
-    /* declare each form element so that JS can call it. This step does not store the data 
-    var weight = document.getElementById("weight");
-    var volgal = document.getElementById("volgoal");
-    var volgal = document.getElementById("thing1");
-    var volgal = document.getElementById("thing2");
-    /* add additional form elements here*/
+    /* math goes here */
+    let feed_volume = (+formData.get('feedlimit_val') * +formData.get('weight_val'))/8;
 
-    /* take form results and store them as variables locally 
-    localStorage.setItem("weight", weight.value)
-    localStorage.setItem("volgoal", volgoal.value)
-    localStorage.setItem("thing1", thing1.value)
-    localStorage.setItem("thing2", thing2.value)
-    /* add additional variables to save locally */
+    let hourly_feed_volume = (feed_volume/3);
 
-    /* 
-    math goes here 
-    to do: coerce thing1/2 values from null to 0 if they are empty
-    */
-    let result = +formData.get('weightval') + +formData.get('volgoalval');
-
+    /* Rates are coerced to 0 if they are any "falsey" values such as NaN, null, etc */
+    let fluid_rate = +formData.get('tflrate_val') 
+      - (formData.get('rate1') || 0)
+      - (formData.get('rate2') || 0)
+      - (formData.get('rate3') || 0)
+      - (formData.get('rate4') || 0)
+      - (formData.get('rate5') || 0)
+      - hourly_feed_volume;
+    
     /* 
     Below is where I output the results in the <p> element directly below the form. 
     Note that concat string needs to go within backticks
+    Numbers are rounded to 1 decimal place and turned into string 
+    (important only if I need to do more math)
     */
-    output.textContent = `Output goes here: ${result} (units)`;
+    output.textContent = `Fluid Rate: ${fluid_rate.toFixed(2)} (mL/hr). 
+      Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
 }
 
+
+/* Below waits untilt the page loads and then creates a listener event for form submission */
 window.onload = function() {
 
   var form = document.getElementById("dataform");

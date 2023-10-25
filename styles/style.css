@@ -6,10 +6,25 @@ html {
 }
 
 /* Formatting text */
-h1 {
-  font-size: 28px;
+h1,
+h2,
+h3 {
   text-align: center;
   color: black;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 5px;
 }
 
 p {
@@ -42,6 +57,37 @@ label {
   padding-right: 10px;
 }
 
+label.unitlab {
+  padding-left: 5px;
+}
+
+div.mainrow {
+  display: table;
+  margin: 0 auto;
+}
+
+div.infusioncol,
+div.ratecol {
+  display: grid;
+  width: 50%;
+
+}
+
+div.infusioncol {
+  float: left;
+}
+
+div.sidecol {
+  display: table;
+  margin: 0 auto;
+}
+
+div.formbutton {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+/*
 div.mainrow {
   display: flex;
 }
@@ -74,3 +120,4 @@ div.formbutton {
   justify-content: center;
   padding-top: 10px;
 }
+*/

@@ -24,58 +24,144 @@
     <form id="dataform" action="" method="post" class="form">
 
       <div class="mainrow">
-        <div class="formlabels">
 
-          <label for="weight">Weight (grams):</label> <br />
-          <label for="volgoal">Volume goal (mL/kg/day):</label> <br />
-          <label for="thing1">Thing 1 (Unit TBD):</label> <br />
-          <label for="thing2">Thing 2 (Unit TBD):</label> <br />
+        <label for="tflrate">TFL Rate:</label> 
+        <input 
+          type="number"
+          name="tflrate_val"
+          id="tflrate"
+          required
+          min=1
+          placeholder="Input TFL Rate"
+          class="datainput" />
+        <label class="unitlab">mL/hr</label>
+        <br />
 
-        </div>
+        <label for="feedlimit">Ordered Feed Limit:</label> 
+        <input 
+          type="number"
+          name="feedlimit_val"
+          id="feedlimit"
+          required
+          min=1
+          placeholder="Input Feed Limit"
+          class="datainput" />
+        <label class="unitlab">mL/kg/day</label>
+        <br />
 
-        <div class="forminputs">
-
-          <input 
-            type="number"
-            name="weightval"
-            id="weight"
-            required
-            min=1
-            placeholder="Input weight"
-            class="datainput" />
-          <input 
-            type="number"
-            name="volgoalval"
-            id="volgoal"
-            required
-            min=1
-            placeholder="Input volume goal"
-            class="datainput" />
-          <input 
-            type="number" 
-            name="thing1val"
-            id="thing1"
-            min=0
-            placeholder="Input Thing 1"
-            class="datainput" />
-          <input 
-            type="number" 
-            name="thing2val"
-            id="thing2"
-            min=0
-            placeholder="Input Thing 2"
-            class="datainput" />
+        <label for="weight">Infant Weight:</label> 
+        <input 
+          type="number"
+          name="weight_val"
+          id="weight"
+          required
+          min=1
+          placeholder="Input weight"
+          class="datainput" />
+        <label class="unitlab">kg</label>
 
         </div>
+
+      <div class="suppforms">
         
-        <div class="formnotes">
+        <h2>Continuous Infusions</h2>
 
-          <input type="text" id="note1" class="hidenote"/>
-          <input type="text" id="note2" class="hidenote"/>
-          <input type="text" id="note3" placeholder="Enter note"/>
-          <input type="text" id="note4" placeholder="Enter note"/>
+        <div class="infusioncol">
+          <h3>Infusion</h3>
 
+          <div class="sidecol">
+
+            <label for="inf1">1.</label>
+            <input
+              type="text"
+              name="note1"
+              id="inf1"
+              class="note" />
+            <br />
+
+            <label for="inf2">2.</label>
+            <input
+              type="text"
+              name="note2"
+              id="inf2"
+              class="note" />
+            <br />
+
+            <label for="inf3">3.</label>
+            <input
+              type="text"
+              name="note3"
+              id="inf3"
+              class="note" />
+            <br />
+
+            <label for="inf4">4.</label>
+            <input
+              type="text"
+              name="note4"
+              id="inf4"
+              class="note" />
+            <br />
+
+            <label for="inf5">5.</label>
+            <input
+              type="text"
+              name="note5"
+              id="inf5"
+              class="note" />
+            <br />
+
+            </div>
         </div>
+
+        <div class="ratecol">
+          <h3>Rate (mL/hr)</h3>
+
+          <div class="sidecol">
+
+            <input
+              type="number"
+              name="rate1"
+              id="r1"
+              class="rate" />
+            <label class="unitlab">mL/hr</label>
+            <br />
+
+            <input
+              type="number"
+              name="rate2"
+              id="r2"
+              class="rate" />
+            <label class="unitlab">mL/hr</label>
+            <br />
+
+            <input
+              type="number"
+              name="rate3"
+              id="r3"
+              class="rate" />
+            <label class="unitlab">mL/hr</label>
+            <br />
+
+            <input
+              type="number"
+              name="rate4"
+              id="r4"
+              class="rate" />
+            <label class="unitlab">mL/hr</label>
+            <br />
+
+            <input
+              type="number"
+              name="rate5"
+              id="r5"
+              class="rate" />
+            <label class="unitlab">mL/hr</label>
+            <br />
+
+          </div>
+
+      </div>
 
       </div>
 
