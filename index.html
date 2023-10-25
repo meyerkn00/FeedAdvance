@@ -26,6 +26,90 @@
       <div class="mainrow">
         <div class="formlabels">
 
+          <label for="tflrate">TFL Rate (mL/hr):</label> 
+          <input 
+            type="number"
+            name="tflrate_val"
+            id="tflrate"
+            required
+            min=1
+            placeholder="Input TFL Rate"
+            class="datainput" />
+          <label for="feedlimit">Ordered Feed Limit (mL/kg/d):</label> 
+          <input 
+            type="number"
+            name="feedlimit_val"
+            id="feedlimit"
+            required
+            min=1
+            placeholder="Input Feed Limit"
+            class="datainput" />
+          <label for="weight">Infant Weight (kg):</label> 
+          <input 
+            type="number"
+            name="weight_val"
+            id="weight"
+            required
+            min=1
+            placeholder="Input weight"
+            class="datainput" />
+
+        </div>
+
+      <div class="suppforms">
+        
+        <h2>Continuous Infusions</h2>
+
+        <div class="infusioncol">
+          <h3>Infusion</h3>
+          <label for="inf1">1.</label>
+          <input
+            type="text"
+            name="note1"
+            id="inf1"
+            class="note" />
+
+          <label for="inf2">2.</label>
+          <input
+            type="text"
+            name="note2"
+            id="inf2"
+            class="note" />
+
+          <label for="inf3">3.</label>
+          <input
+            type="text"
+            name="note3"
+            id="inf3"
+            class="note" />
+
+          <label for="inf4">4.</label>
+          <input
+            type="text"
+            name="note4"
+            id="inf4"
+            class="note" />
+
+          <label for="inf5">5.</label>
+          <input
+            type="text"
+            name="note5"
+            id="inf5"
+            class="note" />
+        </div>
+
+        <div class="ratecol">
+          <h3>Rate</h3>
+        </div>
+
+
+      </div>
+
+
+<!--
+      <div class="mainrow">
+        <div class="formlabels">
+
           <label for="weight">Weight (grams):</label> 
           <br />
           <label for="volgoal">Volume goal (mL/kg/day):</label> 
@@ -91,7 +175,7 @@
           value="Calculate" />
 
       </div>
-
+<--
     </form>
 
     <p id="output"></p>
