@@ -26,7 +26,8 @@ function formsubmit(event) {
     Below is where I output the results in the <p> element directly below the form. 
     Note that concat string needs to go within backticks
     */
-    output.textContent = `Fluid Rate: ${fluid_rate} (mL/hr). Feed Volume: ${feed_volume} (ml per 3 hours)`;
+    output.textContent = `Fluid Rate: ${fluid_rate.toFixed(2)} (mL/hr). 
+      Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
 }
 
 window.onload = function() {
