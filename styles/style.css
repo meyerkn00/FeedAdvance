@@ -4,14 +4,14 @@ html {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 28px;
   text-align: center;
   color: black;
 }
 
 p,
 li {
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 2;
   letter-spacing: 0px;
 }
