@@ -40,12 +40,14 @@ body {
   width: 600px;
   margin: 0 auto;
   background-color: #ffffff;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  padding: 0 20px 20px 20px; /* Top, right, bottom, left (aka NESW)*/
+  border: 5px solid black; 
 }
 
 input {
   border: 2px solid black;
+  font-size: 20px;
+  margin: 5px 0 5px 0;
 }
 
 label {
@@ -86,4 +88,5 @@ div.formbutton {
   display: flex;
   justify-content: center;
   padding-top: 10px;
+  font-size: 20px;
 }
