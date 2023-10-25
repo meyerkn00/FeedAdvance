@@ -1,5 +1,5 @@
 html {
-  font-size: 16px; /* px means "pixels": the base font size is now 16 pixels high */
+  font-size: 20px; /* px means "pixels": the base font size is now 16 pixels high */
   /* font-family: "Open Sans", sans-serif; */
 }
 
@@ -47,12 +47,12 @@ div.flex-parent {
 
 /* Split space w/in div to 75% dataform and 25% notes form */
 form#dataform.form {
-  width: 60%;
+  width: 75%;
   float: left;
 }
 
 form#notesform.form {
-  width: 40%;
+  width: 25%;
   float: right;
   /*
   display: table;
