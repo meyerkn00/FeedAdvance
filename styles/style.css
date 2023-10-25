@@ -47,12 +47,12 @@ div.flex-parent {
 
 /* Split space w/in div to 75% dataform and 25% notes form */
 form#dataform.form {
-  width: 75%;
+  width: 60%;
   float: left;
 }
 
 form#notesform.form {
-  width: 25%;
+  width: 40%;
   float: right;
   /*
   display: table;
@@ -90,6 +90,9 @@ label {
   padding-right: 10px;
 }
 
+input.datainput {
+  width: 125px;
+}
 /* hide 'notehide' class since we only need notes for things (etc thing1, thing2) per spec*/
 
 input.hidenote {
