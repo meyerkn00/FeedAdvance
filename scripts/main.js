@@ -23,19 +23,22 @@ function formsubmit(event) {
     let hourly_feed_volume = (feed_volume/3);
 
     /* Rates are coerced to 0 if they are any "falsey" values such as NaN, null, etc
-    Note: this is no longer needed because the default value for these inputs is 0 */
+    Note: this is no longer needed because the default value for these inputs is 0 
+    for reference, function was (formData.get('rate1') || 0)*/
     let fluid_rate = +formData.get('tflrate_val') 
-      - (formData.get('rate1') || 0)
-      - (formData.get('rate2') || 0)
-      - (formData.get('rate3') || 0)
-      - (formData.get('rate4') || 0)
-      - (formData.get('rate5') || 0)
+      - formData.get('rate1')
+      - formData.get('rate2')
+      - formData.get('rate3')
+      - formData.get('rate4')
+      - formData.get('rate5')
       - hourly_feed_volume;
 
-    /* Error checking and rounding */
+    /* Error checking and rounding. 
+    I do this now and not earlier because the variables define each other and it would throw errors */
     hourly_feed_volume = errorcheck(hourly_feed_volume)
     total_daily_feed_volume = errorcheck(total_daily_feed_volume)
     fluid_rate = errorcheck(fluid_rate)
+
     /* 
     Below is where I output the results in the <p> element directly below the form. 
     Note that concat string needs to go within backticks
@@ -50,19 +53,16 @@ function formsubmit(event) {
 
     /* If all 3 are 0, show error */
     if ((+formData.get('feedlimit_val') + +formData.get('weight_val')) + +formData.get('tflrate_val')=== 0 ) {
-      output.textContent = "Please enter data";
-    
+      output.textContent = "Please enter data";    
     /* If TFL rate is 0, do not show fluid rate*/
     } else if (+formData.get('tflrate_val') === 0) {
       output.textContent = 
         `Total Daily Feed Volume: ${total_daily_feed_volume} (mL)
-        Feed Volume: ${feed_volume} (ml per 3 hours)`;
-    
+        Feed Volume: ${feed_volume} (ml per 3 hours)`;   
     /* If OFL and Rate rate is 0, do not show feed volume */   
     } else if ((+formData.get('feedlimit_val') + +formData.get('weight_val')) === 0 ) {
       output.textContent = 
-        `Fluid Rate: ${fluid_rate} (mL/hr).`;
-    
+        `Fluid Rate: ${fluid_rate} (mL/hr).`;    
     /* Otherwise, show all three */   
     } else {
       output.textContent = 
@@ -77,7 +77,7 @@ function formsubmit(event) {
 }
 
 
-/* Below waits untilt the page loads and then creates a listener event for form submission */
+/* Below waits until the page loads and then creates a listener event for form submission */
 window.onload = function() {
 
   var form = document.getElementById("dataform");
