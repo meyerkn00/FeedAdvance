@@ -39,7 +39,7 @@ p {
 /* Set attributes that contains the content */
 
 body {
-  width: 600px;
+  /*width: 600px;*/
   margin: 0 auto;
   background-color: #ffffff;
   padding: 0 20px 20px 20px; /* Top, right, bottom, left (aka NESW) */
