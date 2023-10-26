@@ -1,5 +1,5 @@
 html {
-  font-size: 20px;
+  font-size: 5.6vw;
   /* font-family: "Open Sans", sans-serif; */
   background-color: #b8e2f4; /* set background color, currently light blue */
 }
@@ -13,23 +13,23 @@ h3 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 6vw;
 }
 
 h2 {
-  font-size: 24px;
-  margin: 10px;
+  font-size: 5.9vw;
+  margin: 2.8vw;
 }
 
 h3 {
-  font-size: 22px;
-  margin: 5px;
+  font-size: 5.8vw;
+  margin: 1.4vw;
 }
 
 p {
   /* font-size: 16px; */
   line-height: 2;
-  letter-spacing: 0px;
+  letter-spacing: 0vw;
   display: flex;
   justify-content: center;
   white-space: pre-line;
@@ -42,27 +42,27 @@ body {
   /*width: 600px;*/
   margin: 0 auto;
   background-color: #ffffff;
-  padding: 0 20px 20px 20px; /* Top, right, bottom, left (aka NESW) */
-  border: 5px solid black; 
+  padding: 0 2.8vw 2.8vw 2.8vw; /* Top, right, bottom, left (aka NESW) */
+  border: .7vw solid black; 
 }
 
 input {
-  border: 2px solid black;
-  font-size: 18px;
-  margin: 2px 0 2px 0;
+  border: .56vw solid black;
+  font-size: 5.6vw;
+  margin: .56vw 0 .56vw 0;
 }
 
 label {
-  padding-right: 10px;
+  padding-right: 2.8vw;
 }
 
 /* Only applies to the unit labels */
 label.unitlab {
-  padding-left: 5px;
+  padding-left: 1.4vw;
 }
 
 /* Centers TFL Rate, Weight, etc column */
-div.mainrow {
+.mainrow {
   display: table;
   margin: 0 auto;
 }
@@ -72,7 +72,6 @@ div.infusioncol,
 div.ratecol {
   display: grid;
   width: 50%;
-
 }
 
 div.infusioncol {
@@ -84,11 +83,22 @@ div.sidecol {
   margin: 0 auto;
 }
 
+.datainput {
+  width: 20%;
+}
+
+.rate {
+  width: 40%;
+}
+
+.note {
+  width: 60%;
+}
 /* Centers 'Calculate' button */
 
 div.formbutton {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  font-size: 20px;
+  padding-top: 1.4vw;
+  font-size: 2.8vw;
 }
