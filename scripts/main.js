@@ -52,7 +52,7 @@ function formsubmit(event) {
     */
 
     /* If all 3 are 0, show error */
-    if ((+formData.get('feedlimit_val') + +formData.get('weight_val')) + +formData.get('tflrate_val')=== 0 ) {
+    if ((+formData.get('feedlimit_val') + +formData.get('weight_val')) + +formData.get('tflrate_val') === 0 ) {
       output.textContent = "Please enter data";    
     /* If TFL rate is 0, do not show fluid rate*/
     } else if (+formData.get('tflrate_val') === 0) {
