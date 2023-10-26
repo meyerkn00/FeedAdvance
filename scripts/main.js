@@ -7,7 +7,8 @@ function formsubmit(event) {
     const formData = new FormData(formElement);
 
     /* math goes here */
-    let feed_volume = (+formData.get('feedlimit_val') * +formData.get('weight_val'))/8;
+    let total_daily_feed_volume = +formData.get('feedlimit_val') * +formData.get('weight_val')
+    let feed_volume = total_daily_feed_volume/8;
 
     let hourly_feed_volume = (feed_volume/3);
 
@@ -20,16 +21,37 @@ function formsubmit(event) {
       - (formData.get('rate4') || 0)
       - (formData.get('rate5') || 0)
       - hourly_feed_volume;
-    
+
     /* 
     Below is where I output the results in the <p> element directly below the form. 
     Note that concat string needs to go within backticks
     Numbers are rounded to 1 decimal place and turned into string 
     (important only if I need to do more math)
+    Old output below
+    output.textContent = 
+      `Fluid Rate: ${fluid_rate.toFixed(1)} (mL/hr).
+      Total Daily Feed Volume = ${total_daily_feed_volume} (mL)
+      Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
     */
-    output.textContent = `Fluid Rate: ${fluid_rate.toFixed(2)} (mL/hr).
-      Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)
-      Total Daily Feed Volume = x ml`;
+
+    /* If TFL rate is 0, do not show fluid rate*/
+    if (+formData.get('tflrate_val') === 0) {
+      output.textContent = 
+        `Total Daily Feed Volume = ${total_daily_feed_volume} (mL)
+        Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
+    
+    /* If OFL and Rate rate is 0, do not show feed volume */   
+    } else if ((+formData.get('feedlimit_val') + +formData.get('weight_val')) === 0 ) {
+      output.textContent = 
+        `Fluid Rate: ${fluid_rate.toFixed(1)} (mL/hr).`;
+    
+    /* Otherwise, show all three */   
+    } else {
+      output.textContent = 
+        `Fluid Rate: ${fluid_rate.toFixed(1)} (mL/hr).
+        Total Daily Feed Volume = ${total_daily_feed_volume} (mL)
+        Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;      
+    }
 }
 
 
