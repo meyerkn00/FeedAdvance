@@ -63,4 +63,8 @@ window.onload = function() {
   /* Form submission is an event, so I can use that to call my function */
   form.addEventListener("submit", formsubmit);
 
+  addEventListener("input", (event) => {
+    output.textContent = ""
+  });
+
 }

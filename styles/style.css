@@ -104,5 +104,8 @@ div.formbutton {
   display: flex;
   justify-content: center;
   padding-top: 1.4vw;
-  font-size: 2.8vw;
+}
+
+input.submitbutton {
+  font-size: 7vw;
 }
