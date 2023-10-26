@@ -98,6 +98,10 @@ div.sidecol {
 .note {
   width: 60%;
 }
+
+p#output {
+  margin: 0;
+}
 /* Centers 'Calculate' button */
 
 div.formbutton {

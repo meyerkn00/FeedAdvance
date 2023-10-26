@@ -52,6 +52,10 @@ function formsubmit(event) {
         Total Daily Feed Volume: ${total_daily_feed_volume} (mL)
         Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;      
     }
+
+    /* Below will scroll the ouput <p> into view, but overscrolls so is annoying
+    output.scrollIntoView({behavior: 'smooth'});
+    */
 }
 
 
