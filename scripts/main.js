@@ -30,14 +30,14 @@ function formsubmit(event) {
     Old output below
     output.textContent = 
       `Fluid Rate: ${fluid_rate.toFixed(1)} (mL/hr).
-      Total Daily Feed Volume = ${total_daily_feed_volume} (mL)
+      Total Daily Feed Volume: ${total_daily_feed_volume} (mL)
       Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
     */
 
     /* If TFL rate is 0, do not show fluid rate*/
     if (+formData.get('tflrate_val') === 0) {
       output.textContent = 
-        `Total Daily Feed Volume = ${total_daily_feed_volume} (mL)
+        `Total Daily Feed Volume: ${total_daily_feed_volume} (mL)
         Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
     
     /* If OFL and Rate rate is 0, do not show feed volume */   
@@ -49,7 +49,7 @@ function formsubmit(event) {
     } else {
       output.textContent = 
         `Fluid Rate: ${fluid_rate.toFixed(1)} (mL/hr).
-        Total Daily Feed Volume = ${total_daily_feed_volume} (mL)
+        Total Daily Feed Volume: ${total_daily_feed_volume} (mL)
         Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;      
     }
 }

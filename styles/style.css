@@ -33,6 +33,7 @@ p {
   display: flex;
   justify-content: center;
   white-space: pre-line;
+  text-align: center;
 }
 
 /* Set attributes that contains the content */
