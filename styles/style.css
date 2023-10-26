@@ -65,6 +65,7 @@ label.unitlab {
 .mainrow {
   display: table;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* Splits Cont. Infusions section into two columns */
@@ -72,6 +73,7 @@ div.infusioncol,
 div.ratecol {
   display: grid;
   width: 50%;
+  text-align: center;
 }
 
 div.infusioncol {
@@ -84,11 +86,13 @@ div.sidecol {
 }
 
 .datainput {
-  width: 20%;
+  width: 10%;
+  text-align: right;
 }
 
 .rate {
   width: 40%;
+  text-align: right;
 }
 
 .note {
