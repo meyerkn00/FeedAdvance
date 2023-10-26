@@ -27,8 +27,9 @@ function formsubmit(event) {
     Numbers are rounded to 1 decimal place and turned into string 
     (important only if I need to do more math)
     */
-    output.textContent = `Fluid Rate: ${fluid_rate.toFixed(2)} (mL/hr). 
-      Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
+    output.textContent = `Fluid Rate: ${fluid_rate.toFixed(2)} (mL/hr).
+      Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)
+      Total Daily Feed Volume = x ml`;
 }
 
 

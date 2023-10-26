@@ -32,6 +32,7 @@ p {
   letter-spacing: 0px;
   display: flex;
   justify-content: center;
+  white-space: pre-line;
 }
 
 /* Set attributes that contains the content */
