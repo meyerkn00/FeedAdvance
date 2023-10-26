@@ -1,3 +1,13 @@
+/* This function checks if the ouput is 0 or negative, if so throws an error
+    if not, the value is rounded to 1 decimal place and returned */
+function errorcheck(value) {
+  if (value <= 0) {
+    return "Error: Value is 0 or negative";
+  } else {
+    return value.toFixed(1);
+  }
+}
+
 function formsubmit(event) {
     /* This one line stops the form from actually submitting, and instead lets JS hijack it */
     event.preventDefault();
@@ -22,6 +32,10 @@ function formsubmit(event) {
       - (formData.get('rate5') || 0)
       - hourly_feed_volume;
 
+    /* Error checking and rounding */
+    hourly_feed_volume = errorcheck(hourly_feed_volume)
+    total_daily_feed_volume = errorcheck(total_daily_feed_volume)
+    fluid_rate = errorcheck(fluid_rate)
     /* 
     Below is where I output the results in the <p> element directly below the form. 
     Note that concat string needs to go within backticks
@@ -34,23 +48,27 @@ function formsubmit(event) {
       Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
     */
 
+    /* If all 3 are 0, show error */
+    if ((+formData.get('feedlimit_val') + +formData.get('weight_val')) + +formData.get('tflrate_val')=== 0 ) {
+      output.textContent = "Please enter data";
+    
     /* If TFL rate is 0, do not show fluid rate*/
-    if (+formData.get('tflrate_val') === 0) {
+    } else if (+formData.get('tflrate_val') === 0) {
       output.textContent = 
         `Total Daily Feed Volume: ${total_daily_feed_volume} (mL)
-        Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;
+        Feed Volume: ${feed_volume} (ml per 3 hours)`;
     
     /* If OFL and Rate rate is 0, do not show feed volume */   
     } else if ((+formData.get('feedlimit_val') + +formData.get('weight_val')) === 0 ) {
       output.textContent = 
-        `Fluid Rate: ${fluid_rate.toFixed(1)} (mL/hr).`;
+        `Fluid Rate: ${fluid_rate} (mL/hr).`;
     
     /* Otherwise, show all three */   
     } else {
       output.textContent = 
-        `Fluid Rate: ${fluid_rate.toFixed(1)} (mL/hr).
+        `Fluid Rate: ${fluid_rate} (mL/hr).
         Total Daily Feed Volume: ${total_daily_feed_volume} (mL)
-        Feed Volume: ${feed_volume.toFixed(1)} (ml per 3 hours)`;      
+        Feed Volume: ${feed_volume} (ml per 3 hours)`;      
     }
 
     /* Below will scroll the ouput <p> into view, but overscrolls so is annoying
