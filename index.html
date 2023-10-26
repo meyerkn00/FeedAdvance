@@ -12,12 +12,12 @@
       rel="stylesheet" />
     -->
     
-    <title>Feed Advance Calculations</title>
+    <title>Fluids Calculator</title>
   
   </head>
 
   <body>
-    <h1>Feed Advance Calculator</h1>
+    <h1>Fluids Calculator</h1>
 
     <p>Please input the following, select proper units, and then hit "Calculate".</p>
 
@@ -31,8 +31,9 @@
           name="tflrate_val"
           id="tflrate"
           required
-          min=1
+          min=0
           step="any"
+          value=0
           placeholder="Input TFL Rate"
           class="datainput" />
         <label class="unitlab">mL/hr</label>
@@ -44,8 +45,9 @@
           name="feedlimit_val"
           id="feedlimit"
           required
-          min=1
+          min=0
           step="any"
+          value=0
           placeholder="Input Feed Limit"
           class="datainput" />
         <label class="unitlab">mL/kg/day</label>
@@ -57,8 +59,9 @@
           name="weight_val"
           id="weight"
           required
-          min=1
+          min=0
           step="any"
+          value=0
           placeholder="Input weight"
           class="datainput" />
         <label class="unitlab">kg</label>
@@ -67,7 +70,7 @@
 
       <div class="suppforms">
         
-        <h2>Continuous Infusions</h2>
+        <h2>Constant Infusions</h2>
 
         <div class="infusioncol">
           <h3>Infusion</h3>
@@ -197,7 +200,7 @@
     <p id="output"></p>
 
     <hr></hr>
-    <p>PLEASE NOTE: The purpose of this webpage is to make performing feed advance calculations easier. I have no medical license or training, and am not affiliated with any hospital or medical center. No form data is stored on the server. © Karl Meyer 2023</p>
+    <p>PLEASE NOTE: The purpose of this webpage is to make performing feed advance calculations easier. I have no medical license or training, and am not affiliated with any hospital or medical center. No form data is stored on the server. © 2023 Karl Meyer</p>
 
     <script src="scripts/main.js"></script>
   </body>
