@@ -61,6 +61,14 @@ p {
   text-align: center;
 }
 
+p.disclaimer {
+  font-size: 0.6rem ;
+}
+
+input.submitbutton {
+  font-size: 1.25rem;
+}
+
 /* Set attributes that contains the content */
 
 input {
@@ -125,8 +133,4 @@ div.formbutton {
   display: flex;
   justify-content: center;
   padding-top: 0.25rem;
-}
-
-input.submitbutton {
-  font-size: 1.25rem;
 }
