@@ -1,10 +1,35 @@
 html {
-  font-size: 5.6vw;
   /* font-family: "Open Sans", sans-serif; */
   background-color: #b8e2f4; /* set background color, currently light blue */
 }
 
-/* Formatting text */
+/* This applies to tablets and desktops */
+@media (width >= 600px) {
+  html {
+    font-size: 20px
+  }
+  body {
+    /* this size is arbitrary, but must be equal to the detection width of @media */
+    width: 600px;
+  }
+}
+
+/* This applies to phones */
+@media (width < 600px) {
+  html {
+    font-size: 5.6vw;
+  }
+}
+
+/* All sizing below is formatted in relation to <html>  
+   font size, which depends on the size of the screen */
+body {
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 0.5rem 0.5rem 0.5rem; /* Top, right, bottom, left (aka NESW) */
+  border: .125rem solid black; 
+}
+
 h1,
 h2,
 h3 {
@@ -20,7 +45,7 @@ h2 {
   font-size: 1.0536rem;
   margin: 0.5rem;
 }
-/* 2.8=0.5, 6=1.0714, 5.9=1.0536, 5.8=1.0357, 1.4=.25, .7=.125, .56=.1*/
+
 h3 {
   font-size: 1.0357rem;
   margin: .25rem;
@@ -37,14 +62,6 @@ p {
 }
 
 /* Set attributes that contains the content */
-
-body {
-  /*width: 600px;*/
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 0 0.5rem 0.5rem 0.5rem; /* Top, right, bottom, left (aka NESW) */
-  border: .125rem solid black; 
-}
 
 input {
   border: 0.1rem solid black;
