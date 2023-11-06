@@ -13,23 +13,23 @@ h3 {
 }
 
 h1 {
-  font-size: 6vw;
+  font-size: 1.0714rem;
 }
 
 h2 {
-  font-size: 5.9vw;
-  margin: 2.8vw;
+  font-size: 1.0536rem;
+  margin: 0.5rem;
 }
-
+/* 2.8=0.5, 6=1.0714, 5.9=1.0536, 5.8=1.0357, 1.4=.25, .7=.125, .56=.1*/
 h3 {
-  font-size: 5.8vw;
-  margin: 1.4vw;
+  font-size: 1.0357rem;
+  margin: .25rem;
 }
 
 p {
   /* font-size: 16px; */
   line-height: 2;
-  letter-spacing: 0vw;
+  letter-spacing: 0rem;
   display: flex;
   justify-content: center;
   white-space: pre-line;
@@ -42,23 +42,23 @@ body {
   /*width: 600px;*/
   margin: 0 auto;
   background-color: #ffffff;
-  padding: 0 2.8vw 2.8vw 2.8vw; /* Top, right, bottom, left (aka NESW) */
-  border: .7vw solid black; 
+  padding: 0 0.5rem 0.5rem 0.5rem; /* Top, right, bottom, left (aka NESW) */
+  border: .125rem solid black; 
 }
 
 input {
-  border: .56vw solid black;
-  font-size: 5.6vw;
-  margin: .56vw 0 .56vw 0;
+  border: 0.1rem solid black;
+  font-size: 1rem;
+  margin: .01rem 0 .01rem 0;
 }
 
 label {
-  padding-right: 2.8vw;
+  padding-right: 0.5rem;
 }
 
 /* Only applies to the unit labels */
 label.unitlab {
-  padding-left: 1.4vw;
+  padding-left: .25rem;
 }
 
 /* Centers TFL Rate, Weight, etc column */
@@ -107,9 +107,9 @@ p#output {
 div.formbutton {
   display: flex;
   justify-content: center;
-  padding-top: 1.4vw;
+  padding-top: 0.25rem;
 }
 
 input.submitbutton {
-  font-size: 7vw;
+  font-size: 1.25rem;
 }
