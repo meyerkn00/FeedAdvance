@@ -1,10 +1,35 @@
 html {
-  font-size: 5.6vw;
   /* font-family: "Open Sans", sans-serif; */
   background-color: #b8e2f4; /* set background color, currently light blue */
 }
 
-/* Formatting text */
+/* This applies to tablets and desktops */
+@media (width >= 600px) {
+  html {
+    font-size: 20px
+  }
+  body {
+    /* this size is arbitrary, but must be equal to the detection width of @media */
+    width: 600px;
+  }
+}
+
+/* This applies to phones */
+@media (width < 600px) {
+  html {
+    font-size: 5.6vw;
+  }
+}
+
+/* All sizing below is formatted in relation to <html>  
+   font size, which depends on the size of the screen */
+body {
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 0.5rem 0.5rem 0.5rem; /* Top, right, bottom, left (aka NESW) */
+  border: .125rem solid black; 
+}
+
 h1,
 h2,
 h3 {
@@ -13,23 +38,23 @@ h3 {
 }
 
 h1 {
-  font-size: 6vw;
+  font-size: 1.0714rem;
 }
 
 h2 {
-  font-size: 5.9vw;
-  margin: 2.8vw;
+  font-size: 1.0536rem;
+  margin: 0.5rem;
 }
 
 h3 {
-  font-size: 5.8vw;
-  margin: 1.4vw;
+  font-size: 1.0357rem;
+  margin: .25rem;
 }
 
 p {
   /* font-size: 16px; */
   line-height: 2;
-  letter-spacing: 0vw;
+  letter-spacing: 0rem;
   display: flex;
   justify-content: center;
   white-space: pre-line;
@@ -38,27 +63,19 @@ p {
 
 /* Set attributes that contains the content */
 
-body {
-  /*width: 600px;*/
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 0 2.8vw 2.8vw 2.8vw; /* Top, right, bottom, left (aka NESW) */
-  border: .7vw solid black; 
-}
-
 input {
-  border: .56vw solid black;
-  font-size: 5.6vw;
-  margin: .56vw 0 .56vw 0;
+  border: 0.1rem solid black;
+  font-size: 1rem;
+  margin: .01rem 0 .01rem 0;
 }
 
 label {
-  padding-right: 2.8vw;
+  padding-right: 0.5rem;
 }
 
 /* Only applies to the unit labels */
 label.unitlab {
-  padding-left: 1.4vw;
+  padding-left: .25rem;
 }
 
 /* Centers TFL Rate, Weight, etc column */
@@ -107,9 +124,9 @@ p#output {
 div.formbutton {
   display: flex;
   justify-content: center;
-  padding-top: 1.4vw;
+  padding-top: 0.25rem;
 }
 
 input.submitbutton {
-  font-size: 7vw;
+  font-size: 1.25rem;
 }
